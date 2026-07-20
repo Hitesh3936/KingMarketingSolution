@@ -1,0 +1,27 @@
+.section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.title {
+  margin-bottom: var(--spacing-2xl) !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.col {
+  width: 100%;
+}

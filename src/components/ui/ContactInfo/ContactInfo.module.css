@@ -1,0 +1,48 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.link, .content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.icon {
+  color: var(--color-white);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.text {
+  color: var(--color-white);
+  word-break: break-word;
+}
+
+/* Vertical layout specifically for sidebar/footer */
+.vertical {
+  gap: 20px;
+}
+
+.vertical .icon {
+  color: var(--color-primary);
+}
+
+.vertical .link:hover .icon {
+  color: var(--color-white);
+}

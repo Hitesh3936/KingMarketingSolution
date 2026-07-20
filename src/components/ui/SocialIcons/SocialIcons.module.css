@@ -1,0 +1,31 @@
+.container {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.icon:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+.light:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

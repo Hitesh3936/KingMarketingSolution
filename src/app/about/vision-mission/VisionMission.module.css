@@ -1,0 +1,120 @@
+.section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 991px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.introCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageCol {
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Vision/Mission Cards */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.card {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border-top: 4px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listItem {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  position: relative;
+  padding-left: 15px;
+}
+
+.listItem::before {
+  content: '•';
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Promise Block */
+.promiseBlock {
+  background: linear-gradient(135deg, rgba(233, 32, 79, 0.03) 0%, rgba(233, 32, 79, 0.08) 100%);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border-left: 4px solid var(--color-primary);
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.promiseTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.promiseText {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+}

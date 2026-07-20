@@ -1,0 +1,136 @@
+.section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.introRow {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 991px) {
+  .introRow {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.introImage {
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* CSR Pillars Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: var(--spacing-4xl);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.card {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border-top: 4px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.pillarTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  position: relative;
+  padding-left: 15px;
+}
+
+.item::before {
+  content: '•';
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Promise block */
+.promise {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border: 1px dashed var(--color-primary);
+}
+
+.promiseTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.promiseText {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.promiseSlogan {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+}

@@ -1,0 +1,104 @@
+.widget {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 15px;
+  z-index: var(--z-chat);
+}
+
+.trigger {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-full);
+  background-color: #a886cd; /* Chaty brand color from original */
+  color: var(--color-white);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.trigger:hover {
+  transform: scale(1.05);
+}
+
+.trigger.active {
+  background-color: var(--color-dark);
+}
+
+.triggerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popover {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideInUp var(--transition-fast) forwards;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--border-radius-xl);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.channel:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-white);
+}
+
+.whatsapp {
+  background-color: #49e670;
+}
+
+.phone {
+  background-color: #03e78b;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .widget {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+
+  .trigger {
+    width: 44px;
+    height: 44px;
+  }
+
+  .channel {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+}

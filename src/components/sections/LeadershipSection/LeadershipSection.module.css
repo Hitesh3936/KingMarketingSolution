@@ -1,0 +1,50 @@
+.section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-bg-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.titleCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 0 !important;
+}
+
+.teamCol {
+  width: 100%;
+}
+
+.teamGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .teamGrid {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.memberCol {
+  width: 100%;
+}

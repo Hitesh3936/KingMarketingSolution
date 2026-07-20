@@ -1,0 +1,92 @@
+.wrapper {
+  margin-bottom: var(--spacing-2xl);
+  width: 100%;
+}
+
+.titleWrap {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.subTitle {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  line-height: var(--line-height-heading);
+}
+
+.lightTitle {
+  color: var(--color-white);
+}
+
+.separator {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin-top: var(--spacing-sm);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  max-width: 800px;
+}
+
+.lightDesc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Alignments */
+.center {
+  text-align: center;
+}
+
+.center .separator {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center .description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.left .separator {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.left .description {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.right {
+  text-align: right;
+}
+
+.right .separator {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.right .description {
+  margin-left: auto;
+  margin-right: 0;
+}

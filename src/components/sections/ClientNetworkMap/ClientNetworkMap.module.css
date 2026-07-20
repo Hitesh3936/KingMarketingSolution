@@ -1,0 +1,66 @@
+.section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-bg-light);
+}
+
+.mapWrapper {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  height: 600px;
+  position: relative;
+  /* Add subtle styling to make it feel premium */
+  border: 1px solid var(--color-border);
+}
+
+.mapCover {
+  position: absolute;
+  top: 0;
+  left: 60px; /* leaves the far-left panel toggle button visible */
+  width: 400px; /* covers the title, profile, and text completely */
+  max-width: calc(100% - 140px); /* ensures neither left nor right buttons are covered */
+  height: 67px;
+  background-color: #2E312F; /* Exact match from the embed URL ehbc parameter */
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through */
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .mapWrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapWrapper {
+    height: 450px;
+    border-radius: var(--border-radius-md);
+  }
+
+  .mapCover {
+    left: 45px;
+    width: 280px;
+    max-width: calc(100% - 110px);
+  }
+}
+
+@media (max-width: 576px) {
+  .mapWrapper {
+    height: 400px;
+  }
+
+  .mapCover {
+    left: 40px;
+    width: 220px;
+    max-width: calc(100% - 100px);
+  }
+}
+
