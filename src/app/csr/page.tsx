@@ -7,7 +7,7 @@ import styles from './CSR.module.css';
 
 export const metadata = generatePageMetadata({
   title: 'Corporate Social Responsibility (CSR)',
-  description: 'At Bajrang Agro, we believe that true success is measured by the positive change we create in the lives of people and the planet.',
+  description: 'At King Marketing Solution, we believe that true success is measured by the positive change we create in the lives of people and the planet.',
   path: '/csr'
 });
 
@@ -57,16 +57,16 @@ const csrPillars = [
 export default function CSRPage() {
   return (
     <>
-      <PageTitleBar title="CSR" />
+      <PageTitleBar title="Corporate Social Responsibility" />
 
       <section className={styles.section}>
         <div className="container">
           <div className={styles.introRow}>
             <div className={styles.introContent}>
               <SectionTitle
-                subtitle="Corporate Social Responsibility"
-                title="Business with Purpose. Impact with Heart."
-                description="At Bajrang Agro Industries, we believe that true success is measured not just by profits, but by the positive change we create in the lives of people and the planet. Our commitment to Corporate Social Responsibility (CSR) is woven into every aspect of our operations—from sourcing and manufacturing to community engagement and environmental stewardship."
+                subtitle="OUR PURPOSE"
+                title="Growing Responsibly - Giving Back Wholeheartedly."
+                description="At King Marketing Solution, we believe that true success is measured not just by profits, but by the positive change we create in the lives of people and the planet. Our commitment to Corporate Social Responsibility (CSR) is woven into every aspect of our operations."
                 align="left"
               />
             </div>
@@ -102,7 +102,7 @@ export default function CSRPage() {
           <div className={styles.promise}>
             <h3 className={styles.promiseTitle}>Our Promise</h3>
             <p className={styles.promiseText}>
-              CSR isn’t a department—it’s a mindset. At Bajrang Agro Industries, we’re committed to building a business that gives back, grows responsibly, and leaves a lasting legacy of care.
+              CSR isn’t a department—it’s a mindset. At King Marketing Solution, we’re committed to building a business that gives back, grows responsibly, and leaves a lasting legacy of care.
             </p>
             <strong className={styles.promiseSlogan}>
               Together, we’re not just manufacturing food—we’re shaping futures.

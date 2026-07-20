@@ -34,7 +34,7 @@ export function Footer() {
                 />
               </div>
               <p className={styles.aboutText}>
-                For over 40 years, Bajrang Agro has been a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. What began as a humble operation...
+                King Marketing Solution is a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. We are a diversified FMCG enterprise, touching lives with staples and snacks across the Globe.
               </p>
               <Button href="/about" size="sm" variant="primary" className={styles.aboutBtn}>
                 More About Us

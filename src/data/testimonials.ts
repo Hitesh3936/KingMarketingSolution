@@ -11,7 +11,7 @@ export const testimonials: Testimonial[] = [
     id: 1,
     name: 'Rajesh Kumar',
     designation: 'Authorized Distributor, Indore',
-    excerpt: 'Partnering with Bajrang Agro has been one of our best business decisions. Their products like Cookwell Chakki Atta and Edible Oils have consistent demand and unparalleled quality.',
+    excerpt: 'Partnering with King Marketing Solution has been one of our best business decisions. Their products like Cookwell Chakki Atta and Edible Oils have consistent demand and unparalleled quality.',
     image: null
   },
   {
@@ -32,7 +32,7 @@ export const testimonials: Testimonial[] = [
     id: 4,
     name: 'Dr. Ananya Goel',
     designation: 'Nutritionist, Delhi',
-    excerpt: 'I highly recommend whole grain wheat products from Bajrang Agro. Their hygienic processing ensures dietary fibers are completely retained, making them highly nutritious.',
+    excerpt: 'I highly recommend whole grain wheat products from King Marketing Solution. Their hygienic processing ensures dietary fibers are completely retained, making them highly nutritious.',
     image: null
   }
 ];

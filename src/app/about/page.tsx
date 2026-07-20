@@ -6,32 +6,30 @@ import { generatePageMetadata } from '@/config/seo.config';
 import styles from './About.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'The Legacy',
-  description: 'For over 40 years, Bajrang Agro has been a trusted name in households across India—delivering quality, authenticity, and care through every product we craft.',
+  title: 'About Us',
+  description: 'King Marketing Solution is a trusted name in households across India—delivering quality, authenticity, and care through every product we craft.',
   path: '/about'
 });
 
-export default function AboutLegacyPage() {
+export default function AboutPage() {
   return (
     <>
-      <PageTitleBar title="The Legacy" />
-      
+      <PageTitleBar title="About Us" />
+
       <section className={styles.section}>
         <div className="container">
           <div className={styles.row}>
             <div className={styles.contentCol}>
-              <SectionTitle
-                subtitle="The Legacy"
-                title="Nourishing Generations Empowering Futures."
-                description="For over 40 years, Bajrang Agro has been a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. What began as a humble Oil Extraction and a Wheat milling operation has grown into a diversified FMCG enterprise, touching lives with staples and snacks that carry the flavor of tradition and the promise of excellence across the Globe. Des se Bides Tak…"
-                align="left"
-              />
+              <h2 className={styles.heading}>Our Legacy of Quality</h2>
+              <p className={styles.text}>
+                King Marketing Solution is a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. We are a diversified FMCG enterprise, touching lives with staples and snacks that carry the flavor of tradition and the promise of excellence across the Globe. Des se Bides Tak…
+              </p>
             </div>
             <div className={styles.imageCol}>
               <div className={styles.imageWrapper}>
                 <Image
-                  src="/assets/about/legacy-1.png"
-                  alt="The Legacy of Bajrang Agro"
+                  src="/assets/about/about-us.jpg"
+                  alt="The Legacy of King Marketing Solution"
                   width={570}
                   height={427}
                   className={styles.image}

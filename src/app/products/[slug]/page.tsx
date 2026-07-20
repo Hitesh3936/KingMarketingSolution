@@ -91,7 +91,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               
               <p className={styles.description}>{product.description}</p>
               
-              <h4 className={styles.listHeading}>Why Choose Bajrang Agro {product.name}?</h4>
+              <h4 className={styles.listHeading}>Why Choose King Marketing {product.name}?</h4>
               <ul className={styles.features}>
                 <li className={styles.featureItem}>
                   <strong>Premium Quality Ingredients</strong>: Selected from the finest farms.

@@ -19,7 +19,7 @@ export function BrowseCatalogue() {
           <div className={styles.actions}>
             <Button
               href="/assets/documents/catalogue.pdf"
-              download="Bajrang_Agro_Catalogue.pdf"
+              download="King_Marketing_Catalogue.pdf"
               variant="secondary"
               className={styles.downloadBtn}
             >

@@ -8,7 +8,7 @@ import styles from './Career.module.css';
 
 export const metadata = generatePageMetadata({
   title: 'Careers',
-  description: 'At Bajrang Agro, we don’t just manufacture food—we craft experiences, nurture communities, and build careers that matter. Explore opportunities with us.',
+  description: 'At King Marketing Solution, we don’t just manufacture food—we craft experiences, nurture communities, and build careers that matter. Explore opportunities with us.',
   path: '/career'
 });
 
@@ -53,9 +53,9 @@ export default function CareerPage() {
       <section className={styles.section}>
         <div className="container">
           <SectionTitle
-            subtitle="Career Opportunities"
-            title="Grow with Us - Build the Future of Food."
-            description="At Bajrang Agro Industries, we don’t just manufacture food—we craft experiences, nurture communities, and build careers that matter. With over four decades of trust and innovation, we’ve grown into one of India’s leading FMCG manufacturers, and our journey is powered by passionate individuals who believe in quality, integrity, and purpose. Whether you’re a seasoned professional or a curious fresher, we offer a workplace where your ideas are valued, your growth is supported, and your contributions make a real impact."
+            subtitle="WORK WITH US"
+            title="Build Your Career with a Company That Cares."
+            description="At King Marketing Solution, we don’t just manufacture food—we craft experiences, nurture communities, and build careers that matter. We offer a workplace where your ideas are valued, your growth is supported, and your contributions make a real impact."
             align="center"
             className={styles.intro}
           />

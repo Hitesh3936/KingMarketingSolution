@@ -11,7 +11,7 @@ export function ProductsGrid() {
         <SectionTitle
           subtitle="PRODUCTS"
           title="Crafted with Care - Trusted for Generations."
-          description="At Bajrang Agro Industries Private Limited, every product is a reflection of our commitment to quality."
+          description="At King Marketing Solution, every product is a reflection of our commitment to quality."
           align="center"
           className={styles.title}
         />

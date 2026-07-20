@@ -22,7 +22,7 @@ export default function BrandsPage() {
           <SectionTitle
             subtitle="BRANDS"
             title="Where Tradition Meets Taste - Where Innovation Sparks Joy."
-            description="At Bajrang Agro, our brands are a promise of purity, quality, and rich heritage. We curate our brands to deliver nutrition and delicious flavors to every kitchen and snack-time across India."
+            description="At King Marketing Solution, our brands are a promise of purity, quality, and rich heritage. We curate our brands to deliver nutrition and delicious flavors to every kitchen and snack-time across India."
             align="center"
             className={styles.intro}
           />

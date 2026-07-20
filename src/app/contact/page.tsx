@@ -9,7 +9,7 @@ import styles from './Contact.module.css';
 
 export const metadata = generatePageMetadata({
   title: 'Contact Us',
-  description: 'Have a query, want to partner with us, or looking to distribute our products? Reach out to Bajrang Agro today.',
+  description: 'Have a query, want to partner with us, or looking to distribute our products? Reach out to King Marketing Solution today.',
   path: '/contact'
 });
 

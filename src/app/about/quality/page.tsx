@@ -47,7 +47,7 @@ export default function QualityPage() {
           <SectionTitle
             subtitle="Certifications"
             title="Quality You Can Trust. Standards We Uphold."
-            description="At Bajrang Agro Industries, excellence isn’t just a goal—it’s a discipline. Every product we manufacture under our flagship brands, Cookwell and Indian Buzz, is backed by globally recognized certifications that reflect our unwavering commitment to safety, quality, sustainability, and ethical business practices."
+            description="At King Marketing Solution, excellence isn’t just a goal—it’s a discipline. Every product we manufacture under our flagship brands, Cookwell and Indian Buzz, is backed by globally recognized certifications that reflect our unwavering commitment to safety, quality, sustainability, and ethical business practices."
             align="center"
             className={styles.introTitle}
           />

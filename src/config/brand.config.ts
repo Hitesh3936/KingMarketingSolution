@@ -1,8 +1,8 @@
 export const brandConfig = {
-  companyName: 'Bajrang Agro Industries Private Limited',
-  shortName: 'Bajrang Agro',
+  companyName: 'King Marketing Solution',
+  shortName: 'King Marketing',
   tagline: 'Nourishing Generations Empowering Futures',
-  description: 'For over 40 years, Bajrang Agro has been a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. What began as a humble Oil Extraction and a Wheat milling operation has grown into a diversified FMCG enterprise, touching lives with staples and snacks that carry the flavor of tradition and the promise of excellence across the Globe. Des se Bides Tak…',
+  description: 'King Marketing Solution is a trusted FMCG enterprise delivering quality staples, rusks, gourmet pastas, and instant noodles across India and globally.',
   website: 'https://bai.incc.in',
   logos: {
     main: '/assets/logos/king-logo.png',
@@ -35,6 +35,6 @@ export const brandConfig = {
     twitter: '#',
     youtube: '#'
   },
-  copyright: 'Copyright © 2026 Bajrang Agro | Powered by Bajrang Agro',
+  copyright: 'Copyright © 2026 King Marketing Solution | Powered by King Marketing',
   googleMapsQuery: 'SCO 21, Madhuban Complex, Rajpura'
 };
