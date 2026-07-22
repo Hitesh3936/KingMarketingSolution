@@ -1,79 +1,163 @@
 import React from 'react';
 import { PageTitleBar } from '@/components/ui/PageTitleBar/PageTitleBar';
-import { SectionTitle } from '@/components/ui/SectionTitle/SectionTitle';
 import { generatePageMetadata } from '@/config/seo.config';
 import styles from './Quality.module.css';
 
 export const metadata = generatePageMetadata({
   title: 'Quality & Certifications',
-  description: 'Every product we manufacture under our flagship brands, Cookwell and Indian Buzz, is backed by globally recognized certifications.',
-  path: '/about/quality'
+  description:
+    'Every product King Marketing Solutions represents is backed by globally recognised certifications reflecting our unwavering commitment to safety, quality, and ethical business.',
+  path: '/about/quality',
 });
 
 const certs = [
   {
-    title: 'FSSC 22000 – Food Safety System Certification',
-    description: 'A globally accepted benchmark for food safety management, FSSC 22000 ensures that our manufacturing processes—from raw material handling to final packaging—are hygienic, traceable, and compliant with international food safety norms.'
+    title: 'FSSC 22000',
+    subtitle: 'Food Safety System Certification',
+    desc: 'A globally accepted benchmark for food safety management ensuring our processes — from raw material handling to final packaging — are hygienic, traceable, and internationally compliant.',
   },
   {
-    title: 'ISO 9000 – Quality Management System',
-    description: 'This certification reflects our dedication to delivering consistent, high-quality products. Every batch is produced with precision, monitored through robust quality checks, and optimized for customer satisfaction.'
+    title: 'ISO 9000',
+    subtitle: 'Quality Management System',
+    desc: 'Reflects our dedication to delivering consistent, high-quality products. Every batch is produced with precision, monitored through robust quality checks, and optimised for customer satisfaction.',
   },
   {
-    title: 'ISO 14000 – Environmental Management System',
-    description: 'We care deeply about the planet. ISO 14000 certifies our efforts in minimizing environmental impact through responsible resource usage, waste reduction, and sustainable manufacturing practices.'
+    title: 'ISO 14000',
+    subtitle: 'Environmental Management System',
+    desc: 'Certifies our efforts in minimising environmental impact through responsible resource usage, waste reduction, and sustainable manufacturing practices.',
   },
   {
-    title: 'SEDEX – Ethical Trade Membership',
-    description: 'As a SEDEX member, we uphold transparency, ethical sourcing, and fair labor practices across our supply chain. We believe in doing business that respects people and communities.'
+    title: 'SEDEX',
+    subtitle: 'Ethical Trade Membership',
+    desc: 'As a SEDEX member, we uphold transparency, ethical sourcing, and fair labour practices across our entire supply chain — doing business that respects people and communities.',
   },
   {
-    title: 'GMP – Good Manufacturing Practices',
-    description: 'Our facilities follow strict GMP protocols to ensure product integrity, cleanliness, and safety. From pasta and vermicelli to instant noodles and chikki, every item is produced in a controlled, contamination-free environment.'
+    title: 'GMP',
+    subtitle: 'Good Manufacturing Practices',
+    desc: 'Strict GMP protocols ensure product integrity, cleanliness, and safety. Every item is produced in a controlled, contamination-free environment from start to finish.',
   },
   {
-    title: 'HACCP – Hazard Analysis & Critical Control Points',
-    description: 'HACCP certification guarantees that our food safety systems proactively identify and control risks. It’s a promise that every product reaching your home is safe, wholesome, and trustworthy.'
-  }
+    title: 'HACCP',
+    subtitle: 'Hazard Analysis & Critical Control Points',
+    desc: 'Guarantees our food safety systems proactively identify and control risks — a promise that every product reaching your home is safe, wholesome, and trustworthy.',
+  },
+];
+
+const commitments = [
+  {
+    label: 'Internal Audits',
+    desc: 'Stringent periodic audits ensure every standard is not just met — but consistently exceeded.',
+  },
+  {
+    label: 'Real-Time Monitoring',
+    desc: 'Live monitoring systems across facilities track quality metrics at every production stage.',
+  },
+  {
+    label: 'Continuous Training',
+    desc: 'Our teams are regularly trained to uphold certification norms with discipline and pride.',
+  },
+  {
+    label: 'Shared Responsibility',
+    desc: 'Quality is embedded across every department — not just a checklist, but a culture.',
+  },
 ];
 
 export default function QualityPage() {
   return (
     <>
       <PageTitleBar title="Quality & Certifications" parentLabel="About" parentHref="/about" />
-      
-      <section className={styles.section}>
-        <div className="container">
-          <SectionTitle
-            subtitle="Certifications"
-            title="Quality You Can Trust. Standards We Uphold."
-            description="At King Marketing Solution, excellence isn’t just a goal—it’s a discipline. Every product we manufacture under our flagship brands, Cookwell and Indian Buzz, is backed by globally recognized certifications that reflect our unwavering commitment to safety, quality, sustainability, and ethical business practices."
-            align="center"
-            className={styles.introTitle}
-          />
 
-          <div className={styles.grid}>
-            {certs.map((cert, index) => (
-              <div key={index} className={styles.card}>
-                <div className={styles.iconWrapper}>
-                  <span className={styles.cardNumber}>0{index + 1}</span>
-                </div>
-                <h4 className={styles.certTitle}>{cert.title}</h4>
-                <p className={styles.certDesc}>{cert.description}</p>
+      {/* ── Intro ─────────────────────────────────────────── */}
+      <section className={styles.introSection}>
+        <div className="container">
+          <div className={styles.introGrid}>
+            <div className={styles.introLeft}>
+              <span className={styles.eyebrow}>Our Standards</span>
+              <h1 className={styles.introHeading}>
+                Quality You Can Trust.<br />Standards We Uphold.
+              </h1>
+            </div>
+            <div className={styles.introRight}>
+              <p className={styles.introPrimary}>
+                At <strong>King Marketing Solutions</strong>, excellence isn&apos;t just a goal —
+                it&apos;s a discipline built into everything we do.
+              </p>
+              <p className={styles.introSecondary}>
+                Every product we represent is backed by globally recognised certifications that
+                reflect our unwavering commitment to safety, quality, sustainability, and ethical
+                business practices. These are not just badges — they are promises we keep every
+                single day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Dark bar ──────────────────────────────────────── */}
+      <section className={styles.barSection}>
+        <div className="container">
+          <div className={styles.barInner}>
+            <div className={styles.barLabel}>
+              <span className={styles.eyebrowLight}>Our Commitment</span>
+            </div>
+            <p className={styles.barStatement}>
+              World-class products. Local heart. These certifications reflect a perfect blend of
+              tradition and technology — and our promise to deliver food that&apos;s safe, ethical,
+              and exceptional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certifications (3-col grid) ───────────────────── */}
+      <section className={styles.certsSection}>
+        <div className="container">
+          <div className={styles.certsHeader}>
+            <span className={styles.eyebrow}>Certifications</span>
+            <h2 className={styles.sectionHeading}>Globally Recognised Standards</h2>
+          </div>
+          <div className={styles.certsGrid}>
+            {certs.map((c, i) => (
+              <div key={i} className={styles.certCard}>
+                <span className={styles.certNum}>{String(i + 1).padStart(2, '0')}</span>
+                <h4 className={styles.certTitle}>{c.title}</h4>
+                <p className={styles.certSub}>{c.subtitle}</p>
+                <p className={styles.certDesc}>{c.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className={styles.commitment}>
-            <SectionTitle
-              subtitle="Commitment to Excellence"
-              title="A Shared Responsibility"
-              description="We maintain stringent internal audits, real-time monitoring systems, and continuous training programs to ensure that every certification standard is not only met—but exceeded. Our teams are trained to uphold these norms with discipline and pride, making quality a shared responsibility across every department."
-              align="center"
-            />
-            <div className={styles.footerText}>
-              <strong>World-Class Products. Local Heart.</strong><br />
-              Our products reflect a perfect blend of tradition and technology. These certifications are more than badges—they’re a reflection of our promise to deliver food that’s safe, ethical, and exceptional.
+      {/* ── Quality Commitments (numbered list style) ─────── */}
+      <section className={styles.commitSection}>
+        <div className="container">
+          <div className={styles.commitGrid}>
+            <div className={styles.commitLeft}>
+              <span className={styles.eyebrow}>How We Maintain It</span>
+              <h2 className={styles.sectionHeading}>A Shared Responsibility</h2>
+              <p className={styles.commitIntro}>
+                We maintain stringent internal audits, real-time monitoring systems, and continuous
+                training to ensure every standard is not only met — but exceeded.
+              </p>
+            </div>
+            <div className={styles.commitRight}>
+              <div className={styles.commitBlock}>
+                <div className={styles.commitTitleRow}>
+                  <h3 className={styles.commitTitle}>Our Quality Commitments</h3>
+                </div>
+                <ul className={styles.commitList}>
+                  {commitments.map((item, i) => (
+                    <li key={i} className={styles.commitItem}>
+                      <span className={styles.commitNum}>{String(i + 1).padStart(2, '0')}</span>
+                      <div>
+                        <p className={styles.commitLabel}>{item.label}</p>
+                        <p className={styles.commitDesc}>{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

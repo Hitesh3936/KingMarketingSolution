@@ -72,11 +72,13 @@
 .doGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: flex-start;
 }
 
 .doLeft {}
+
+.doRight {}
 
 .doHeading {
   font-size: var(--font-size-2xl);
@@ -90,28 +92,37 @@
   font-size: var(--font-size-base);
   line-height: 1.85;
   color: var(--color-text);
-  margin-bottom: 28px;
+  margin-bottom: 0;
 }
 
 .productList {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
 }
 
 .productItem {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 11px 0;
+  gap: 14px;
+  padding: 14px 24px;
   font-size: var(--font-size-base);
   color: var(--color-heading);
   font-weight: var(--font-weight-medium);
   border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
 }
 
-.productItem:first-child {
-  border-top: 1px solid var(--color-border);
+.productItem:last-child {
+  border-bottom: none;
+}
+
+.productItem:hover {
+  background-color: var(--color-bg-light);
 }
 
 .productDot {
@@ -120,63 +131,6 @@
   border-radius: 50%;
   background-color: var(--color-primary);
   flex-shrink: 0;
-}
-
-/* Mission Block */
-.missionBlock {
-  background-color: var(--color-white);
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--color-border);
-  overflow: hidden;
-}
-
-.missionTitle {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-heading);
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--color-border);
-  margin: 0;
-  background-color: var(--color-bg-light);
-}
-
-.missionList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.missionItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--color-border);
-  transition: background-color var(--transition-fast);
-}
-
-.missionItem:last-child {
-  border-bottom: none;
-}
-
-.missionItem:hover {
-  background-color: var(--color-bg-light);
-}
-
-.missionNum {
-  font-size: 11px;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  letter-spacing: 1px;
-  padding-top: 2px;
-  flex-shrink: 0;
-  min-width: 24px;
-}
-
-.missionText {
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  line-height: 1.6;
 }
 
 /* ── Vision Section ──────────────────────────────────────────────── */

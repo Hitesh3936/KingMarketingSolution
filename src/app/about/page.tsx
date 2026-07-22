@@ -20,14 +20,6 @@ const products = [
   'Other FMCG Food Products',
 ];
 
-const mission = [
-  'Deliver high-quality food products at competitive prices',
-  'Build strong partnerships with distributors and retailers',
-  'Expand our presence across India',
-  'Maintain the highest standards of integrity and customer service',
-  'Continuously innovate to meet changing consumer needs',
-];
-
 const strengths = [
   { label: 'Quality Assured', desc: 'Every product we represent meets strict quality standards before it reaches the market.' },
   { label: 'Wide Network', desc: 'A strong distribution network connecting brands to retailers and consumers across India.' },
@@ -72,7 +64,6 @@ export default function AboutPage() {
       <section className={styles.doSection}>
         <div className="container">
           <div className={styles.doGrid}>
-            {/* Products */}
             <div className={styles.doLeft}>
               <span className={styles.eyebrow}>What We Do</span>
               <h2 className={styles.doHeading}>Our Product Range</h2>
@@ -81,6 +72,8 @@ export default function AboutPage() {
                 We work closely with manufacturers and retail partners to ensure consistent product
                 availability, competitive pricing, and efficient supply chain management.
               </p>
+            </div>
+            <div className={styles.doRight}>
               <ul className={styles.productList}>
                 {products.map((p, i) => (
                   <li key={i} className={styles.productItem}>
@@ -89,21 +82,6 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Mission */}
-            <div className={styles.doRight}>
-              <div className={styles.missionBlock}>
-                <h3 className={styles.missionTitle}>Our Mission</h3>
-                <ul className={styles.missionList}>
-                  {mission.map((m, i) => (
-                    <li key={i} className={styles.missionItem}>
-                      <span className={styles.missionNum}>{String(i + 1).padStart(2, '0')}</span>
-                      <span className={styles.missionText}>{m}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
