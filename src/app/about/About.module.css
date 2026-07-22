@@ -1,98 +1,354 @@
-.section {
-  padding: var(--spacing-section) 0;
-  background-color: var(--color-white);
+/* ── Shared ──────────────────────────────────────────────────────── */
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  margin-bottom: 14px;
 }
 
-.row {
+.eyebrowLight {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Intro Section ───────────────────────────────────────────────── */
+
+.introSection {
+  padding: 80px 0 72px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.introLeft {}
+
+.introHeading {
+  font-size: 42px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.introRight {
+  padding-top: 6px;
+}
+
+.introPrimary {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+  font-weight: var(--font-weight-regular);
+}
+
+.introSecondary {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+/* ── What We Do Section ──────────────────────────────────────────── */
+
+.doSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+}
+
+.doGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
-  margin-bottom: var(--spacing-3xl);
+  align-items: flex-start;
 }
 
-.row:last-child {
+.doLeft {}
+
+.doHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.doText {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.productItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  font-size: var(--font-size-base);
+  color: var(--color-heading);
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.productItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.productDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Mission Block */
+.missionBlock {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.missionTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  margin: 0;
+  background-color: var(--color-bg-light);
+}
+
+.missionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.missionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+.missionItem:last-child {
+  border-bottom: none;
+}
+
+.missionItem:hover {
+  background-color: var(--color-bg-light);
+}
+
+.missionNum {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  padding-top: 2px;
+  flex-shrink: 0;
+  min-width: 24px;
+}
+
+.missionText {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ── Vision Section ──────────────────────────────────────────────── */
+
+.visionSection {
+  padding: 72px 0;
+  background-color: var(--color-heading);
+}
+
+.visionInner {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.visionLabel {
+  flex-shrink: 0;
+  padding-top: 6px;
+  min-width: 120px;
+}
+
+.visionStatement {
+  font-size: 26px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* ── Strength Section ────────────────────────────────────────────── */
+
+.strengthSection {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.strengthHeader {
+  margin-bottom: 48px;
+}
+
+.strengthHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.strengthGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.strengthCard {
+  background-color: var(--color-white);
+  padding: 32px 28px;
+  transition: background-color var(--transition-fast);
+}
+
+.strengthCard:hover {
+  background-color: var(--color-bg-light);
+}
+
+.strengthNum {
+  display: block;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.strengthLabel {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+
+.strengthDesc {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+/* ── Commitment Section ──────────────────────────────────────────── */
+
+.commitSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.commitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.commitHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.commitText {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.commitText:last-child {
   margin-bottom: 0;
 }
 
-.reversed {
-  grid-template-columns: 1fr 1fr;
-}
-
-.reversed .contentCol {
-  grid-column: 2;
-}
-
-.reversed .imageCol {
-  grid-column: 1;
-  grid-row: 1;
-}
+/* ── Responsive ──────────────────────────────────────────────────── */
 
 @media (max-width: 991px) {
-  .row, .reversed {
+  .introGrid,
+  .doGrid,
+  .commitGrid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
-  .reversed .contentCol {
-    grid-column: unset;
+
+  .introHeading {
+    font-size: 32px;
   }
 
-  .reversed .imageCol {
-    grid-column: unset;
-    grid-row: unset;
+  .visionInner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .visionStatement {
+    font-size: 22px;
+  }
+
+  .strengthGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.contentCol {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 768px) {
+  .introSection,
+  .doSection,
+  .visionSection,
+  .strengthSection,
+  .commitSection {
+    padding: 56px 0;
+  }
+
+  .introHeading {
+    font-size: 28px;
+  }
 }
 
-.heading {
-  font-size: var(--font-size-2xl);
-  color: var(--color-heading);
-  margin-bottom: var(--spacing-md);
-  position: relative;
-  padding-bottom: 10px;
-}
+@media (max-width: 576px) {
+  .strengthGrid {
+    grid-template-columns: 1fr;
+  }
 
-.heading::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background-color: var(--color-primary);
-}
-
-.text {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-body);
-  color: var(--color-text);
-  margin-bottom: var(--spacing-md);
-}
-
-.imageCol {
-  width: 100%;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  transition: transform var(--transition-slow);
-}
-
-.imageWrapper:hover .image {
-  transform: scale(1.03);
+  .visionStatement {
+    font-size: 19px;
+  }
 }

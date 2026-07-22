@@ -1,0 +1,440 @@
+/* ── Shared ──────────────────────────────────────────────────────── */
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+/* ── Profile Section ─────────────────────────────────────────────── */
+
+.profileSection {
+  padding: 80px 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+/* Photo */
+.photoCol {}
+
+.photoFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Bio */
+.bioCol {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.founderName {
+  font-size: 44px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.founderSub {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+/* Stats */
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 32px;
+}
+
+.stat:first-child {
+  padding-left: 0;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+}
+
+.bioText {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.bioText:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Career Section ──────────────────────────────────────────────── */
+
+.careerSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+}
+
+.careerHeader {
+  margin-bottom: 40px;
+}
+
+.sectionHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin: 0;
+}
+
+/* Table-style career list */
+.careerTable {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.careerRow {
+  display: grid;
+  grid-template-columns: 48px 1fr 1fr 1.6fr;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+.careerRowLast {
+  border-bottom: none;
+}
+
+.careerRow:hover {
+  background-color: var(--color-bg-light);
+}
+
+.careerIndex,
+.careerOrg,
+.careerRole,
+.careerDetail {
+  padding: 20px 22px;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.careerIndex {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 14px;
+  background-color: var(--color-bg-light);
+}
+
+.careerRowLast .careerIndex {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.careerOrg {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  border-right: 1px solid var(--color-border);
+}
+
+.careerRole {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  border-right: 1px solid var(--color-border);
+  font-style: italic;
+}
+
+.careerDetail {
+  color: var(--color-text);
+}
+
+/* ── Vision Section ──────────────────────────────────────────────── */
+
+.visionSection {
+  padding: 80px 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.visionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+.visionCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.visionText {
+  font-size: var(--font-size-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.visionText:last-child {
+  margin-bottom: 0;
+}
+
+/* Values */
+.valuesCol {
+  border-left: 1px solid var(--color-border);
+  padding-left: 56px;
+}
+
+.valuesTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.valuesIntro {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.valuesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.valuesItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  font-size: var(--font-size-base);
+  color: var(--color-heading);
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.valuesItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.valueTick {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+/* ── Quote Section ───────────────────────────────────────────────── */
+
+.quoteSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.quoteInner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quoteText {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--color-heading);
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.quoteText::before {
+  content: '"';
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 72px;
+  color: var(--color-primary);
+  font-style: normal;
+  line-height: 1;
+  opacity: 0.25;
+  font-family: Georgia, serif;
+}
+
+.quoteFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.quoteAuthor {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.quoteDivider {
+  color: var(--color-text);
+}
+
+.quoteRole {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .careerRow {
+    grid-template-columns: 48px 1fr 1fr;
+  }
+
+  .careerDetail {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .profileGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .photoFrame {
+    max-width: 320px;
+    aspect-ratio: 3 / 4;
+  }
+
+  .founderName {
+    font-size: 34px;
+  }
+
+  .visionGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .valuesCol {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding-left: 0;
+    padding-top: 40px;
+  }
+
+  .careerRow {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .careerRole {
+    display: none;
+  }
+
+  .careerDetail {
+    display: block;
+    grid-column: 2;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileSection,
+  .careerSection,
+  .visionSection,
+  .quoteSection {
+    padding: 56px 0;
+  }
+
+  .statRow {
+    gap: 0;
+  }
+
+  .stat {
+    padding: 0 18px;
+  }
+
+  .statValue {
+    font-size: 22px;
+  }
+
+  .quoteText {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .careerRow {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .statRow {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .statDivider {
+    display: none;
+  }
+}

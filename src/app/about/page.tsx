@@ -1,63 +1,167 @@
 import React from 'react';
-import Image from 'next/image';
 import { PageTitleBar } from '@/components/ui/PageTitleBar/PageTitleBar';
-import { SectionTitle } from '@/components/ui/SectionTitle/SectionTitle';
 import { generatePageMetadata } from '@/config/seo.config';
 import styles from './About.module.css';
 
 export const metadata = generatePageMetadata({
   title: 'About Us',
-  description: 'King Marketing Solution is a trusted name in households across India—delivering quality, authenticity, and care through every product we craft.',
-  path: '/about'
+  description:
+    'King Marketing Solutions is a dedicated FMCG marketing and distribution company committed to delivering quality food products across India.',
+  path: '/about',
 });
+
+const products = [
+  'Instant Noodles',
+  'Pasta & Macaroni',
+  'Vermicelli',
+  'Soya Chunks',
+  'Snacks',
+  'Rusks',
+  'Other FMCG Food Products',
+];
+
+const mission = [
+  'Deliver high-quality food products at competitive prices',
+  'Build strong partnerships with distributors and retailers',
+  'Expand our presence across India',
+  'Maintain the highest standards of integrity and customer service',
+  'Continuously innovate to meet changing consumer needs',
+];
+
+const strengths = [
+  { label: 'Quality Assured', desc: 'Every product we represent meets strict quality standards before it reaches the market.' },
+  { label: 'Wide Network', desc: 'A strong distribution network connecting brands to retailers and consumers across India.' },
+  { label: 'Reliable Delivery', desc: 'Timely and consistent product availability through efficient supply chain management.' },
+  { label: 'Competitive Pricing', desc: 'Best-in-class pricing that creates value for our partners at every level.' },
+  { label: 'Customer First', desc: 'A service approach built on transparency, responsiveness, and long-term relationships.' },
+  { label: 'Experienced Team', desc: 'A dedicated workforce with deep industry knowledge and on-ground expertise.' },
+];
 
 export default function AboutPage() {
   return (
     <>
       <PageTitleBar title="About Us" />
 
-      <section className={styles.section}>
+      {/* ── Intro ─────────────────────────────────────────────────── */}
+      <section className={styles.introSection}>
         <div className="container">
-          <div className={styles.row}>
-            <div className={styles.contentCol}>
-              <h2 className={styles.heading}>Our Legacy of Quality</h2>
-              <p className={styles.text}>
-                King Marketing Solution is a trusted name in households across India—delivering quality, authenticity, and care through every product we craft. We are a diversified FMCG enterprise, touching lives with staples and snacks that carry the flavor of tradition and the promise of excellence across the Globe. Des se Bides Tak…
+          <div className={styles.introGrid}>
+            <div className={styles.introLeft}>
+              <span className={styles.eyebrow}>Who We Are</span>
+              <h1 className={styles.introHeading}>
+                Welcome to<br />King Marketing Solutions
+              </h1>
+            </div>
+            <div className={styles.introRight}>
+              <p className={styles.introPrimary}>
+                At <strong>King Marketing Solutions</strong>, we are committed to delivering quality
+                food products that bring great taste, value, and trust to every customer.
+              </p>
+              <p className={styles.introSecondary}>
+                As a dedicated marketing and distribution company, we proudly connect trusted brands
+                with retailers, wholesalers, distributors, and consumers across India. Our mission
+                is to make high-quality food products easily accessible while building long-lasting
+                relationships through reliability, transparency, and exceptional service.
               </p>
             </div>
-            <div className={styles.imageCol}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src="/assets/about/about-us.jpg"
-                  alt="The Legacy of King Marketing Solution"
-                  width={570}
-                  height={427}
-                  className={styles.image}
-                />
+          </div>
+        </div>
+      </section>
+
+      {/* ── What We Do ───────────────────────────────────────────── */}
+      <section className={styles.doSection}>
+        <div className="container">
+          <div className={styles.doGrid}>
+            {/* Products */}
+            <div className={styles.doLeft}>
+              <span className={styles.eyebrow}>What We Do</span>
+              <h2 className={styles.doHeading}>Our Product Range</h2>
+              <p className={styles.doText}>
+                We specialise in the marketing and distribution of a wide range of food products.
+                We work closely with manufacturers and retail partners to ensure consistent product
+                availability, competitive pricing, and efficient supply chain management.
+              </p>
+              <ul className={styles.productList}>
+                {products.map((p, i) => (
+                  <li key={i} className={styles.productItem}>
+                    <span className={styles.productDot} />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Mission */}
+            <div className={styles.doRight}>
+              <div className={styles.missionBlock}>
+                <h3 className={styles.missionTitle}>Our Mission</h3>
+                <ul className={styles.missionList}>
+                  {mission.map((m, i) => (
+                    <li key={i} className={styles.missionItem}>
+                      <span className={styles.missionNum}>{String(i + 1).padStart(2, '0')}</span>
+                      <span className={styles.missionText}>{m}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className={`${styles.row} ${styles.reversed}`}>
-            <div className={styles.contentCol}>
-              <h3 className={styles.heading}>Our Journey of Growth</h3>
-              <p className={styles.text}>
-                Through persistent dedication to standard practices and sourcing directly from farmers, we ensure only the best reaches your table. Over the decades, we have continuously integrated advanced milling and packaging technologies to maintain the highest hygiene and quality benchmarks.
-              </p>
-              <p className={styles.text}>
-                Our journey has been guided by a clear focus: to bring purity and health into every household. We continue to innovate, expanding our product catalog from traditional flours to modern instant foods and snacks, satisfying the evolving demands of our consumers.
-              </p>
+      {/* ── Vision ──────────────────────────────────────────────── */}
+      <section className={styles.visionSection}>
+        <div className="container">
+          <div className={styles.visionInner}>
+            <div className={styles.visionLabel}>
+              <span className={styles.eyebrowLight}>Our Vision</span>
             </div>
-            <div className={styles.imageCol}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src="/assets/about/legacy-2.png"
-                  alt="Our Journey"
-                  width={570}
-                  height={427}
-                  className={styles.image}
-                />
+            <p className={styles.visionStatement}>
+              To become one of India&apos;s most trusted marketing and distribution companies by
+              providing quality products, innovative solutions, and outstanding customer satisfaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Strengths ────────────────────────────────────────────── */}
+      <section className={styles.strengthSection}>
+        <div className="container">
+          <div className={styles.strengthHeader}>
+            <span className={styles.eyebrow}>Why Choose Us</span>
+            <h2 className={styles.strengthHeading}>What Sets Us Apart</h2>
+          </div>
+          <div className={styles.strengthGrid}>
+            {strengths.map((s, i) => (
+              <div key={i} className={styles.strengthCard}>
+                <span className={styles.strengthNum}>{String(i + 1).padStart(2, '0')}</span>
+                <h4 className={styles.strengthLabel}>{s.label}</h4>
+                <p className={styles.strengthDesc}>{s.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Commitment ───────────────────────────────────────────── */}
+      <section className={styles.commitSection}>
+        <div className="container">
+          <div className={styles.commitGrid}>
+            <div className={styles.commitLeft}>
+              <span className={styles.eyebrow}>Our Commitment</span>
+              <h2 className={styles.commitHeading}>Built on Trust. Driven by Excellence.</h2>
+            </div>
+            <div className={styles.commitRight}>
+              <p className={styles.commitText}>
+                Every product we represent reflects our commitment to quality and customer
+                satisfaction. We believe that success is built on trust, consistency, and lasting
+                partnerships. Whether you are a retailer, distributor, wholesaler, or consumer, we
+                are dedicated to providing products and services that exceed expectations.
+              </p>
+              <p className={styles.commitText}>
+                We look forward to growing together and serving customers across India with
+                excellence.
+              </p>
             </div>
           </div>
         </div>
