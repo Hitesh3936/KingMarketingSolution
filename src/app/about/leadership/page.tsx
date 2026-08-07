@@ -66,7 +66,7 @@ export default function LeadershipPage() {
             <div className={styles.photoCol}>
               <div className={styles.photoFrame}>
                 <Image
-                  src="/assets/team/sunil-verma.png"
+                  src="/assets/team/managing-director.jpg"
                   alt="Mr. Sunil Verma, Founder — King Marketing Solutions"
                   fill
                   sizes="(max-width: 768px) 100vw, 360px"
