@@ -9,7 +9,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Sunil Verma',
     role: 'Managing Director',
-    image: '/assets/team/managing-director.jpg',
+    image: '/assets/team/Sunil_Verma.jpeg',
     slug: 'sunil-verma'
   }
 ];
