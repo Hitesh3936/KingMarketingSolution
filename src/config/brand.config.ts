@@ -5,7 +5,8 @@ export const brandConfig = {
   description: 'King Marketing Solution is a trusted FMCG enterprise delivering quality staples, rusks, gourmet pastas, and instant noodles across India and globally.',
   website: 'https://bai.incc.in',
   logos: {
-    main: '/assets/logos/king-logo.png',
+    main: '/assets/logos/king-logo.svg',
+    svg: '/assets/logos/king-logo.svg',
     cookwell: '/assets/logos/cookwell-logo.png',
     indianBuzz: '/assets/logos/indian-buzz-logo.png',
     footerCookwell: '/assets/logos/footer-cookwell-logo.png',

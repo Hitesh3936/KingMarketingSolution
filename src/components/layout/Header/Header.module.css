@@ -55,14 +55,15 @@
 }
 
 .logo {
+  display: block;
+  height: 48px;
+  width: auto;
   object-fit: contain;
-  height: auto;
-  max-height: 50px;
-  transition: max-height var(--transition-base);
+  transition: height var(--transition-base);
 }
 
 .header.sticky .logo {
-  max-height: 45px;
+  height: 40px;
 }
 
 /* Nav Menu */

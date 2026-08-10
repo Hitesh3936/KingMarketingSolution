@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { brandConfig } from '@/config/brand.config';
 import { navigationItems } from '@/data/navigation';
@@ -22,13 +21,11 @@ export function Header() {
           <div className={styles.inner}>
             <div className={styles.logoCol}>
               <Link href="/" className={styles.logoLink}>
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={brandConfig.logos.main}
                   alt={brandConfig.companyName}
-                  width={180}
-                  height={72}
                   className={styles.logo}
-                  priority
                 />
               </Link>
             </div>

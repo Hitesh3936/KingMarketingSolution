@@ -45,6 +45,15 @@ export function generatePageMetadata({
       ],
       type: 'website',
     },
+    icons: {
+      icon: [
+        { url: '/assets/logos/favicon-32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/assets/logos/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/assets/logos/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+    },
     twitter: {
       card: 'summary_large_image',
       title: pageTitle,

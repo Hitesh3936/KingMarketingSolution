@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { usePathname } from 'next/navigation';
 import { brandConfig } from '@/config/brand.config';
 import { navigationItems } from '@/data/navigation';
@@ -46,13 +46,11 @@ export function MobileHeader() {
 
             <div className={styles.logoCol}>
               <Link href="/">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={brandConfig.logos.main}
                   alt={brandConfig.companyName}
-                  width={150}
-                  height={60}
                   className={styles.logo}
-                  priority
                 />
               </Link>
             </div>
@@ -65,11 +63,11 @@ export function MobileHeader() {
       <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`}>
         <div className={styles.drawerHeader}>
           <div className={styles.drawerLogo}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={brandConfig.logos.main}
               alt={brandConfig.companyName}
-              width={130}
-              height={52}
+              className={styles.logo}
             />
           </div>
           <button

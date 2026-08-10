@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { brandConfig } from '@/config/brand.config';
 import { footerNavItems } from '@/data/navigation';
 import { SocialIcons } from '@/components/ui/SocialIcons/SocialIcons';
@@ -18,19 +17,11 @@ export function Footer() {
             {/* Column 1: Brand Info */}
             <div className={styles.col}>
               <div className={styles.logoRow}>
-                <Image
-                  src={brandConfig.logos.footerIndianBuzz}
-                  alt="Indian Buzz Logo"
-                  width={90}
-                  height={81}
-                  className={styles.footerLogo}
-                />
-                <Image
-                  src={brandConfig.logos.footerCookwell}
-                  alt="Cookwell Logo"
-                  width={90}
-                  height={81}
-                  className={styles.footerLogo}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={brandConfig.logos.main}
+                  alt={brandConfig.companyName}
+                  className={styles.footerMainLogo}
                 />
               </div>
               <p className={styles.aboutText}>
