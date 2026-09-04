@@ -52,6 +52,9 @@ export function generatePageMetadata({
     alternates: {
       canonical: canonicalUrl,
     },
+    verification: {
+      google: 'google888727015cd25fa1',
+    },
     robots: {
       index: true,
       follow: true,
