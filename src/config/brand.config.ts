@@ -44,6 +44,7 @@ export const brandConfig = {
     twitter: '#',
     youtube: '#'
   },
+  googleAnalyticsId: 'G-7QFCRYV02B',
   copyright: 'Copyright © 2026 King Marketing Solution | Powered by King Marketing',
   googleMapsQuery: 'SCO 21, Madhuban Complex, Rajpura'
 };

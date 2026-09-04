@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Poppins } from 'next/font/google';
 import { generatePageMetadata } from '@/config/seo.config';
+import { brandConfig } from '@/config/brand.config';
 import { Header } from '@/components/layout/Header/Header';
 import { MobileHeader } from '@/components/layout/MobileHeader/MobileHeader';
 import { Footer } from '@/components/layout/Footer/Footer';
@@ -41,6 +43,28 @@ export default function RootLayout({
         <JsonLdScript data={webSiteJsonLd} />
       </head>
       <body>
+        {brandConfig.googleAnalyticsId && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${brandConfig.googleAnalyticsId}`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${brandConfig.googleAnalyticsId}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
         <div id="page" className="site-wrapper">
           <Header />
           <MobileHeader />
