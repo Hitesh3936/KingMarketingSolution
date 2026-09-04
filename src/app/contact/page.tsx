@@ -7,15 +7,29 @@ import { GoogleMap } from '@/components/ui/GoogleMap/GoogleMap';
 import { generatePageMetadata } from '@/config/seo.config';
 import styles from './Contact.module.css';
 
+import { JsonLdScript, generateBreadcrumbJsonLd } from '@/utils/seo';
+
 export const metadata = generatePageMetadata({
-  title: 'Contact Us',
-  description: 'Have a query, want to partner with us, or looking to distribute our products? Reach out to King Marketing Solution today.',
-  path: '/contact'
+  title: 'Contact Us — FMCG Distribution & Business Inquiries | King Marketing Solution',
+  description: 'Connect with King Marketing Solution in Rajpura, Punjab for FMCG distribution opportunities, wholesale product inquiries, dealership partnerships, and bulk orders across India.',
+  path: '/contact',
+  keywords: [
+    'Contact FMCG Distributor Punjab',
+    'King Marketing Solution Contact',
+    'FMCG Wholesale Inquiries Rajpura',
+    'Distributor Partnership Punjab',
+  ],
 });
 
 export default function ContactPage() {
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Contact Us', url: '/contact' },
+  ]);
+
   return (
     <>
+      <JsonLdScript data={breadcrumbJsonLd} />
       <PageTitleBar title="Contact Us" />
 
       <section className={styles.section}>

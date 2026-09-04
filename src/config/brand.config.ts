@@ -1,9 +1,9 @@
 export const brandConfig = {
   companyName: 'King Marketing Solution',
   shortName: 'King Marketing',
-  tagline: 'Nourishing Generations Empowering Futures',
-  description: 'King Marketing Solution is a trusted FMCG enterprise delivering quality staples, rusks, gourmet pastas, and instant noodles across India and globally.',
-  website: 'https://bai.incc.in',
+  tagline: 'Leading FMCG Marketing & Distribution Company in India',
+  description: 'King Marketing Solution is a premier FMCG marketing and distribution enterprise based in Rajpura, Punjab. We connect top FMCG brands with retailers, wholesalers, and distributors across India, delivering high-quality instant noodles, pasta, macaroni, vermicelli, soya chunks, and rusks.',
+  website: 'https://www.kingmarketingsolution.com',
   logos: {
     main: '/assets/logos/king-logo.svg',
     svg: '/assets/logos/king-logo.svg',
@@ -29,7 +29,15 @@ export const brandConfig = {
     phone: '+91 85000 05628',
     phoneRaw: '918500005628',
     email: 'kingmarketing21@gmail.com',
-    address: 'SCO 21, 2nd Floor, Madhuban Complex, Rajpura, 140401'
+    address: 'SCO 21, 2nd Floor, Madhuban Complex, Rajpura, Punjab 140401',
+    city: 'Rajpura',
+    state: 'Punjab',
+    postalCode: '140401',
+    country: 'India',
+    geo: {
+      latitude: '30.4842',
+      longitude: '76.5932'
+    }
   },
   social: {
     facebook: '#',

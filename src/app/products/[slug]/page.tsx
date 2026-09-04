@@ -6,7 +6,7 @@ import { products } from '@/data/products';
 import { PageTitleBar } from '@/components/ui/PageTitleBar/PageTitleBar';
 import { Button } from '@/components/ui/Button/Button';
 import { generatePageMetadata } from '@/config/seo.config';
-import { JsonLdScript, generateProductJsonLd } from '@/utils/seo';
+import { JsonLdScript, generateProductJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 import styles from './ProductDetail.module.css';
 
 interface ProductDetailPageProps {
@@ -35,10 +35,16 @@ export async function generateMetadata({ params }: ProductDetailPageProps) {
   }
 
   return generatePageMetadata({
-    title: product.name,
-    description: product.description,
+    title: `${product.name} — Wholesale FMCG Food Product`,
+    description: `${product.description} Available in bulk for distributors, wholesalers, and retailers across India from King Marketing Solution.`,
     path: `/products/${product.slug}`,
     image: product.detailImage || product.image,
+    keywords: [
+      `${product.name} Wholesale`,
+      `${product.name} Distributor India`,
+      `Buy ${product.name} Bulk`,
+      `Cookwell ${product.name}`,
+    ],
   });
 }
 
@@ -50,17 +56,25 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     notFound();
   }
 
+  const displayImage = product.detailImage || product.image;
+
   const productJsonLd = generateProductJsonLd(
     product.name,
     product.description,
-    product.detailImage || product.image
+    displayImage,
+    product.slug
   );
 
-  const displayImage = product.detailImage || product.image;
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Products', url: '/products' },
+    { name: product.name, url: `/products/${product.slug}` },
+  ]);
 
   return (
     <>
       <JsonLdScript data={productJsonLd} />
+      <JsonLdScript data={breadcrumbJsonLd} />
       <PageTitleBar title={product.name} parentLabel="Products" parentHref="/products" />
 
       <section className={styles.section}>

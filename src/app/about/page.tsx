@@ -3,11 +3,18 @@ import { PageTitleBar } from '@/components/ui/PageTitleBar/PageTitleBar';
 import { generatePageMetadata } from '@/config/seo.config';
 import styles from './About.module.css';
 
+import { JsonLdScript, generateBreadcrumbJsonLd } from '@/utils/seo';
+
 export const metadata = generatePageMetadata({
-  title: 'About Us',
+  title: 'About Us — Leading FMCG Marketing & Distribution Enterprise',
   description:
-    'King Marketing Solutions is a dedicated FMCG marketing and distribution company committed to delivering quality food products across India.',
+    'Learn about King Marketing Solution: A dedicated FMCG marketing and distribution enterprise based in Rajpura, Punjab. We connect premier food brands with distributors and retailers across India.',
   path: '/about',
+  keywords: [
+    'About King Marketing Solution',
+    'FMCG Distribution Company Overview',
+    'Food Product Supply Chain Partner Punjab',
+  ],
 });
 
 const products = [
@@ -30,8 +37,14 @@ const strengths = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'About Us', url: '/about' },
+  ]);
+
   return (
     <>
+      <JsonLdScript data={breadcrumbJsonLd} />
       <PageTitleBar title="About Us" />
 
       {/* ── Intro ─────────────────────────────────────────────────── */}

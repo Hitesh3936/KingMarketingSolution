@@ -6,7 +6,12 @@ import { MobileHeader } from '@/components/layout/MobileHeader/MobileHeader';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { ChatWidget } from '@/components/ui/ChatWidget/ChatWidget';
 import { BackToTop } from '@/components/ui/BackToTop/BackToTop';
-import { JsonLdScript, generateOrganizationJsonLd } from '@/utils/seo';
+import {
+  JsonLdScript,
+  generateOrganizationJsonLd,
+  generateLocalBusinessJsonLd,
+  generateWebSiteJsonLd,
+} from '@/utils/seo';
 
 import '@/styles/globals.css';
 
@@ -25,11 +30,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const orgJsonLd = generateOrganizationJsonLd();
+  const localBusinessJsonLd = generateLocalBusinessJsonLd();
+  const webSiteJsonLd = generateWebSiteJsonLd();
 
   return (
     <html lang="en" className={poppins.variable}>
       <head>
         <JsonLdScript data={orgJsonLd} />
+        <JsonLdScript data={localBusinessJsonLd} />
+        <JsonLdScript data={webSiteJsonLd} />
       </head>
       <body>
         <div id="page" className="site-wrapper">
