@@ -46,7 +46,7 @@ export function generateLocalBusinessJsonLd() {
     name: brandConfig.companyName,
     url: brandConfig.website,
     logo: `${brandConfig.website}${brandConfig.logos.main}`,
-    image: `${brandConfig.website}/assets/hero/banner-1.png`,
+    image: `${brandConfig.website}/assets/og-image.png`,
     description: brandConfig.description,
     telephone: brandConfig.contact.phone,
     email: brandConfig.contact.email,

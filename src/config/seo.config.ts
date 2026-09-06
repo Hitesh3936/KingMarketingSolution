@@ -20,7 +20,7 @@ export const defaultKeywords = [
 export const seoConfig = {
   title: `${brandConfig.companyName} | Leading FMCG Marketing & Distribution Company in India`,
   description: brandConfig.description,
-  ogImage: '/assets/hero/banner-1.png',
+  ogImage: '/assets/og-image.png',
   siteUrl: brandConfig.website,
 };
 
